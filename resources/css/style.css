@@ -81,12 +81,12 @@
 }
 @media screen and (max-width: 1400px) {
  .landing-N3 .s-intro__text-huge { --text-huge-size: 22rem; }
+ .landing-N3 .s-intro__img { width: 100%; }
  .Mobile_img { display: none; }
  .PC_img { display: block; }
 }
 @media screen and (max-width: 1200px) {
  .landing-N3 .s-intro__text-huge { --text-huge-size: 18vw; }
- .landing-N3 .s-intro__img { width: 100%; }
  .Mobile_img { display: none; }
  .PC_img { display: block; }
 }
@@ -176,11 +176,15 @@
  .landing-N7 .s-footer__bottom .ss-column:first-child { margin-bottom: 6.4rem; }
  .landing-N7 .s-footer__contact { margin-top: 3.2rem; }
  .landing-N7 .stack-on-900, .landing-N7 .block-stack-on-900>.column { flex: none; width: 100%; }
+ .ss-column  span{display: block;}
+ .timer_div span{display: block;}
 }
 @media screen and (max-width: 800px) {
  .landing-N7 .ss-go-top { right: 3.2rem; bottom: 3.2rem; }
  .landing-N7 .ss-go-top a { height: 5.6rem; width: 5.6rem; }
  .landing-N7 .ss-go-top svg { height: 2rem; width: 2rem; }
+ .ss-column  span{display: block;}
+ .timer_div span{display: block;}
 }
 @media screen and (max-width: 600px) {
  .landing-N7 .s-footer__top h2 { font-size: 4rem; }
@@ -189,10 +193,15 @@
  .landing-N7 .s-footer__subscribe input[type="email"] { margin-bottom: 2rem; }
  .landing-N7 .s-footer__subscribe input[type="submit"] { height: 7.2rem; }
  .landing-N7 .ss-go-top { right: 2.4rem; bottom: 2.4rem; }
+ .ss-column  span{display: block;}
+ .timer_div span{display: block;}
 }
 @media screen and (max-width: 400px) {
  .landing-N7 .s-footer__contact .s-footer__mail-link { font-size: 2rem; }
  .landing-N7 .ss-go-top a { height: 4.8rem; width: 4.8rem; }
+ .ss-column span{display: block;}
+ .timer_div span{display: block;}
+
 }
 #days { font-size: 70px; color: #db4844; }
 #hours { font-size: 70px; color: #f07c22; }
@@ -200,4 +209,5 @@
 #seconds { font-size: 50px; color: #abcd58; }
 .landing-N7 .timer_div { line-height: 1; font-size: 40px; margin: 40px; text-align: center; font-family: "Inter", Bold; }
 .landing-N7 .timer_elem { display: inline-block; margin: 30 auto; }
-.landing-N7 .timer_div span { display: block; font-size: 20px; color: gray; font-family: 'Noto-Sans', Sans-Serif; }
+.landing-N7 .timer_elem span { display: block; font-size: 15px; color: gray; font-family: 'Noto-Sans', Sans-Serif; }
+
