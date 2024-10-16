@@ -57,6 +57,7 @@
  .menu-is-open .landing-N1 { height: auto; }
  .menu-is-open .landing-N1 .s-header__nav-wrap { transform: scaleY(1); transition: transform 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); transition-delay: 0s; }
  .menu-is-open .landing-N1 .s-header__nav, .menu-is-open .landing-N1 .s-header__social { transform: translateY(0); opacity: 1; visibility: visible; transition: all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1); transition-delay: .4s; }
+ .landing-N1 .s-header__h1 .site-title { font-size: 20px; }
 }
 .landing-N1 .u-screen-reader-text { clip: rect(1px, 1px, 1px, 1px); clip-path: inset(50%); height: 1px; width: 1px; margin: -1px; overflow: hidden; padding: 0; border: 0; position: absolute; word-wrap: normal !important; }
 
@@ -176,15 +177,15 @@
  .landing-N7 .s-footer__bottom .ss-column:first-child { margin-bottom: 6.4rem; }
  .landing-N7 .s-footer__contact { margin-top: 3.2rem; }
  .landing-N7 .stack-on-900, .landing-N7 .block-stack-on-900>.column { flex: none; width: 100%; }
- .ss-column  span{display: block;}
- .timer_div span{display: block;}
+ .ss-column span { display: block; }
+ .timer_div span { display: block; }
 }
 @media screen and (max-width: 800px) {
  .landing-N7 .ss-go-top { right: 3.2rem; bottom: 3.2rem; }
  .landing-N7 .ss-go-top a { height: 5.6rem; width: 5.6rem; }
  .landing-N7 .ss-go-top svg { height: 2rem; width: 2rem; }
- .ss-column  span{display: block;}
- .timer_div span{display: block;}
+ .ss-column span { display: block; }
+ .timer_div span { display: block; }
 }
 @media screen and (max-width: 600px) {
  .landing-N7 .s-footer__top h2 { font-size: 4rem; }
@@ -193,15 +194,14 @@
  .landing-N7 .s-footer__subscribe input[type="email"] { margin-bottom: 2rem; }
  .landing-N7 .s-footer__subscribe input[type="submit"] { height: 7.2rem; }
  .landing-N7 .ss-go-top { right: 2.4rem; bottom: 2.4rem; }
- .ss-column  span{display: block;}
- .timer_div span{display: block;}
+ .ss-column span { display: block; }
+ .timer_div span { display: block; }
 }
 @media screen and (max-width: 400px) {
  .landing-N7 .s-footer__contact .s-footer__mail-link { font-size: 2rem; }
  .landing-N7 .ss-go-top a { height: 4.8rem; width: 4.8rem; }
- .ss-column span{display: block;}
- .timer_div span{display: block;}
-
+ .ss-column span { display: block; }
+ .timer_div span { display: block; }
 }
 #days { font-size: 70px; color: #db4844; }
 #hours { font-size: 70px; color: #f07c22; }
@@ -210,4 +210,3 @@
 .landing-N7 .timer_div { line-height: 1; font-size: 40px; margin: 40px; text-align: center; font-family: "Inter", Bold; }
 .landing-N7 .timer_elem { display: inline-block; margin: 30 auto; }
 .landing-N7 .timer_elem span { display: block; font-size: 15px; color: gray; font-family: 'Noto-Sans', Sans-Serif; }
-
