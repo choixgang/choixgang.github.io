@@ -58,6 +58,24 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 	font-display:swap;
 }
 
+@font-face {
+	font-family:'Pretendard-Medium';
+	src: url('./fonts/Pretendard-Medium/Pretendard-Medium.ttf');
+	src: url('./fonts/Pretendard-Medium/Pretendard-Medium.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
+@font-face {
+	font-family:'Pretendard-Thin';
+	src: url('./fonts/Pretendard-Thin/Pretendard-Thin.ttf');
+	src: url('./fonts/Pretendard-Thin/Pretendard-Thin.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	font-display:swap;
+}
+
 /* = Blocs
 -------------------------------------------------------------- */
 
@@ -277,6 +295,14 @@ button{
 .btn-rd{
 	border-radius: 40px;
 }
+.btn-wire{
+	background:transparent!important;
+	border:2px solid transparent;
+}
+.btn-wire:hover{
+	background:transparent!important;
+	border:2px solid transparent;
+}
 .a-block{
 	width:100%;
 	text-align:left;
@@ -311,11 +337,23 @@ button{
 .img-frame-lg,.img-frame-rd-lg{
 	padding:14px;
 }
+/* Image Protection */
+.img-protected{
+	-webkit-touch-callout: none;
+}
 
+/* = Text & Icon Styles
+-------------------------------------------------------------- */
+.pressed-t{
+	text-shadow:0 1px 0 #FFF;
+}
 /* = Text Widths
 -------------------------------------------------------------- */
 .text-w-90{
 	max-width:90%;
+}
+.text-w-50{
+	max-width:50%;
 }
 .text-center.text-w-sm, .text-center.text-w-md, .text-center.text-w-lg, .text-center.text-w-90, .text-center.text-w-80, .text-center.text-w-70, .text-center.text-w-60, .text-center.text-w-50{
 	margin-left: auto;
@@ -370,6 +408,10 @@ button{
 
 .carousel-indicators li::marker{
 	font-size:0;
+}
+/* Scroll FX */
+.scroll-fx-in-range{
+	will-change: opacity;
 }
 
 
@@ -611,6 +653,9 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .tc-1975{
 	color:var(--swatch-var-1975)!important;
 }
+.tc-1687{
+	color:var(--swatch-var-1687)!important;
+}
 
 /* Button colour styles */
 
@@ -621,6 +666,10 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .btn-c-4019:hover{
 	background:#1072A4!important;
 	color:rgba(0,0,0,.5)!important;
+}
+.wire-btn-c-4019{
+	color:var(--swatch-var-4019)!important;
+	border-color:var(--swatch-var-4019)!important;
 }
 
 /* Link colour styles */
@@ -737,6 +786,7 @@ url("img/IMG_0418.webp") 2x);
 	.h1-style{
 		width:100%;
 		font-size:20px;
+		letter-spacing:-0.03em;
 	}
 	.h4-style{
 		width:100%;
@@ -746,6 +796,7 @@ url("img/IMG_0418.webp") 2x);
 		font-family:"Pretendard-ExtraBold";
 		width:95.54%;
 		font-size:3em;
+		letter-spacing:-0.03em;
 	}
 	.h1-초대합니다-style{
 		font-family:"Pretendard-Medium";
@@ -754,27 +805,33 @@ url("img/IMG_0418.webp") 2x);
 	.h6-style{
 		font-size:1em;
 		font-family:"Pretendard-Regular";
+		letter-spacing:-0.03em;
 	}
 	.h6-누군가-물어봤을-때--style{
 		font-size:1em;
 		font-family:"Pretendard-Regular";
+		letter-spacing:-0.03em;
 	}
 	.h6-순간의-망설임-없이-style{
-		font-size:15px;
+		font-size:1em;
 		font-family:"Pretendard-Regular";
+		letter-spacing:-0.03em;
 	}
 	.h6-bloc-1-style{
 		font-size:1em;
 		font-family:"Pretendard-Regular";
+		letter-spacing:-0.03em;
 	}
 	.h6-저희-둘-결혼합니다--style{
 		font-size:1em;
 		font-family:"Pretendard-Regular";
+		letter-spacing:-0.03em;
 	}
 	.h1-오후-1시-style{
 		font-family:"Pretendard-ExtraBold";
 		width:95.09%;
 		font-size:3em;
+		letter-spacing:-0.03em;
 	}
 	.img-style{
 		width:15px;
@@ -787,6 +844,7 @@ url("img/IMG_0418.webp") 2x);
 		font-family:"Pretendard-Bold";
 		font-size:24px;
 		width:100%;
+		letter-spacing:-0.03em;
 	}
 	.h1-3-style{
 		font-family:"Pretendard-Regular";
@@ -844,10 +902,12 @@ url("img/IMG_0418.webp") 2x);
 		font-family:"Pretendard-Regular";
 		font-size:20px;
 		width:100%;
+		letter-spacing:-0.03em;
 	}
 	.h1-bloc-1-style2{
 		font-family:"Pretendard-Regular";
 		font-size:20px;
+		letter-spacing:-0.03em;
 	}
 	.이름{
 	}
@@ -871,13 +931,14 @@ url("img/IMG_0418.webp") 2x);
 	.btn_photo{
 		width:40%;
 		font-family:"Pretendard-Regular";
-		color:var(--swatch-var-843)!important;
+		color:var(--swatch-var-4019)!important;
 		font-size:10px;
 		height:20px;
 		text-align:center;
 		writing-mode:horizontal-tb;
 		align-items:center;
 		align-content:center;
+		border-width:0.2px 0.2px 0.2px 0.2px;
 	}
 	.btn-padding-top{
 		padding-top:2px;
@@ -981,7 +1042,7 @@ url("img/IMG_0418.webp") 2x);
 		height:43px;
 	}
 	.img-row’{
-		height:75px;
+		;
 	}
 	.map-container{
 		height:360px;
@@ -990,6 +1051,7 @@ url("img/IMG_0418.webp") 2x);
 	.h6-그랜드블랑-8층-미라벨가든-style{
 		font-family:"Pretendard-SemiBold";
 		font-size:1.3em;
+		letter-spacing:-0.04em;
 	}
 	.label-style{
 		font-family:"Pretendard-Thin";
@@ -1029,12 +1091,81 @@ url("img/IMG_0418.webp") 2x);
 		font-family:"Pretendard-SemiBold";
 		box-shadow:inset 0.00px -15.00px 0px var(--swatch-var-3969);
 		font-size:1.5em;
+		letter-spacing:-0.03em;
 	}
 	.h6-1-style{
 		font-size:2em;
+		letter-spacing:-0.03em;
 	}
 	.h6-오시는길-style{
 		;
+	}
+	.h3-style{
+		font-family:"Pretendard-Bold";
+		font-size:1.1em;
+		width:100%;
+	}
+	.h6-14-style{
+		font-family:"Pretendard-Regular";
+		font-size:0.9em;
+		letter-spacing:-0.04rem;
+	}
+	.h3-sub-contents-style{
+		font-family:"Pretendard-SemiBold";
+		font-size:1.2em;
+	}
+	.p-style{
+		font-family:"Pretendard-Regular";
+		font-size:0.9rem;
+	}
+	.h6-12-style{
+		letter-spacing:-0.04em;
+	}
+	.h1-03월-22일-토--style{
+		font-family:"Pretendard-Medium";
+		font-size:1.4em;
+		letter-spacing:-0.05em;
+	}
+	.h1-오전-8시-출발-style{
+		font-family:"Pretendard-Bold";
+		font-size:1.5em;
+		letter-spacing:-0.04em;
+	}
+	.h1-청주종합경기장-앞-style{
+		font-family:"Pretendard-Bold";
+		font-size:1.3em;
+		letter-spacing:-0.03em;
+	}
+	.bus-btn{
+		color:var(--swatch-var-843)!important;
+		font-family:"Pretendard-Medium";
+		font-size:1.2em;
+		letter-spacing:-0.03em;
+		text-align:center;
+	}
+	.h1-sub-contents-style{
+		font-family:"Pretendard-Thin";
+		font-size:1.6em;
+		letter-spacing:-0.03em;
+		width:99.55%;
+	}
+	.h1-종윤-영은-결혼식이-style{
+		font-family:"Pretendard-Bold";
+		font-size:2em;
+		box-shadow:inset 0.00px -10.00px 0px var(--swatch-var-3969);
+	}
+	.d-day{
+		box-shadow:inset 0.00px -10.00px 0px var(--swatch-var-3969);
+	}
+	.h6-대절-버스-안내-style{
+		font-family:"Pretendard-ExtraBold";
+		font-size:2%;
+	}
+	.img-img-64-style{
+		width:72px;
+	}
+	.footer-link{
+		text-align:center;
 	}
 	
 }
