@@ -909,10 +909,6 @@ url("img/IMG_0418-1.webp") 2x);
 		font-family:"Pretendard-Bold";
 		font-size:20px;
 	}
-	.직책?{
-		font-family:"Pretendard-Bold";
-		font-size:20px;
-	}
 	.grid-bloc-1-row-gap{
 		row-gap:23px;
 		grid-template-columns:1.00fr 1fr;
@@ -1054,12 +1050,6 @@ url("img/IMG_0418-1.webp") 2x);
 		text-align:center;
 		text-decoration:underline!important;
 	}
-	.copy-btn{
-		;
-	}
-	.copy-link{
-		;
-	}
 	.copy-text{
 		font-size:0.7em;
 	}
@@ -1188,6 +1178,9 @@ url("img/IMG_0418-1.webp") 2x);
 		font-family:"Pretendard-Light";
 		font-size:0.7em;
 		letter-spacing:-0.03em;
+		border: none;
+		background-color:transparent;
+		text-decoration: underline;
 	}
 	.h6-21-style{
 		font-family:"Pretendard-Regular";
