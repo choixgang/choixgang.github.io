@@ -596,6 +596,7 @@
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
 																<a id="account_4"class="a-btn a-block account_link ltc-1975">우리은행 1002686960925 </a>
+																<button data-clipboard-text="우리은행 1002686960925">복사하기</button>
 															</div>
 														</div>
 													</li>
@@ -669,8 +670,22 @@
 <script src="./js/blocs.min.js?4754"></script>
 <script src="./js/lazysizes.min.js" defer></script>
 <script src="./js/scrollFX.js?445"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 <!-- Additional JS END -->
 
+<script>
+    var btns = document.querySelectorAll('button');
+    var clipboard = new ClipboardJS(btns);
+    
+    clipboard.on('success', function(e) {
+      console.log(e);
+      alert('복사가 완료되었습니다.')
+    });
+    
+    clipboard.on('error', function(e) {
+      console.log(e);
+    });
+</script>
 
 </body>
 </html>
