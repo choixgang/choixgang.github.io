@@ -8,6 +8,8 @@
 body{
 	margin:0;
 	padding:0;
+    width: 100%;
+    height: 100%;
     background:#FFFFFF;
     overflow-x:hidden;
     -webkit-font-smoothing: antialiased;
@@ -25,13 +27,11 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 /* Preloader */
 .mask {
 	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+    width: 100vw;
 	background-color: rgba(0, 0, 0);
 	z-index: 9999;
 	transition: 0.5s ease;
+	vertical-align: middle;
   }
 .page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 5s;animation-duration: 0.5s;animation-fill-mode: both;}
 .preloader-complete{animation-delay:0.1s;}
@@ -1135,7 +1135,7 @@ url("img/IMG_0418-1.webp") 2x);
 	}
 	.d-day{
 		font-family:"Pretendard-ExtraBold";
-		font-size:1.15em;
+		font-size:1.7em;
 		letter-spacing:-0.03em;
 
 		box-shadow:inset 0.00px -10.00px 0px var(--swatch-var-3969);
