@@ -703,7 +703,10 @@ url("img/IMG_0418-1.webp") 2x);background-image: image-set(url("img/IMG_0418-1.p
 url("img/IMG_0418-1.png") 2x,url("img/IMG_0418-1.webp") 1x,
 url("img/IMG_0418-1.webp") 2x);
 }
-
+.bg-IMG-thanks{
+	background-image:url("img/thanks_img.png");
+	background-image: image-set(url("img/thanks_img.png") 1x,url("img/thanks_img.png") 2x);
+}
 
 
 /* = Bloc Padding Multi Breakpoint
