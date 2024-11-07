@@ -1043,9 +1043,6 @@ url("img/IMG_0418-1.webp") 2x);
 		text-align:center;
 		text-decoration:underline!important;
 	}
-	.copy-text{
-		font-size:0.7em;
-	}
 	.copy-link{
 		align-items:center;
 	}
@@ -1175,6 +1172,7 @@ url("img/IMG_0418-1.webp") 2x);
 		border: none;
 		background-color:transparent;
 		text-decoration: underline;
+		font-palette: '#FFFFFF';
 	}
 	.account-header{
 		font-family:"Pretendard-SemiBold";
