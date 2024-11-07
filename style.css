@@ -24,7 +24,7 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 
 /* Preloader */
 
-.page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 2s;animation-duration: 0.5s;animation-fill-mode: both;}
+.page-preloader{position: fixed;top: 0;bottom: 0;width: 100%;z-index:100000;background:#FFFFFF url("img/pageload-spinner.gif") no-repeat center center;animation-name: preloader-fade;animation-delay: 5s;animation-duration: 0.5s;animation-fill-mode: both;}
 .preloader-complete{animation-delay:0.1s;}
 @keyframes preloader-fade {0% {opacity: 1;visibility: visible;}100% {opacity: 0;visibility: hidden;}}
 
@@ -352,7 +352,7 @@ button{
 	border-radius:30px;
 }
 .card-rd .card-header{
-	border-radius:29px 29px 0 0;
+	border-radius:2px 2px 0 0;
 }
 .card-rd .card-footer{
 	border-radius:0 0 29px 29px;
@@ -537,7 +537,8 @@ a[data-lightbox]:hover img{
 -------------------------------------------------------------- */
 
 h1,h2,h3,h4,h5,h6,p,label,.btn,a{
-	font-family:"Helvetica";
+	font-family:"Pretendard-Regular";
+	letter-spacing:-0.03em;
 }
 .container{
 	max-width:1140px;
@@ -560,9 +561,15 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	align-items:center;
 }
 .dad{
+	font-family:"Pretendard-Regular";
+	letter-spacing:-0.03em;
+	font-size:2em;
 	width:47.50%;
 }
 .mom{
+	font-family:"Pretendard-Regular";
+	letter-spacing:-0.03em;
+	font-size:2em;
 	width:47.50%;
 }
 .heart{
@@ -576,7 +583,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 .img-style{
 	width:50%;
 }
-.아들딸{
+.who{
 	font-family:"Pretendard-SemiBold";
 	font-size:1.7em;
 }
@@ -584,11 +591,7 @@ h1,h2,h3,h4,h5,h6,p,label,.btn,a{
 	font-family:"Pretendard-Regular";
 	font-size:2em;
 }
-.h1-bloc-1-style2{
-	font-family:"Pretendard-Regular";
-	font-size:2em;
-}
-.이름{
+.name{
 	font-family:"Pretendard-SemiBold";
 	font-size:2em;
 }
@@ -903,8 +906,6 @@ url("img/IMG_0418-1.webp") 2x);
 		font-size:20px;
 		letter-spacing:-0.03em;
 	}
-	.이름{
-	}
 	.아들딸{
 		font-family:"Pretendard-Bold";
 		font-size:20px;
@@ -940,9 +941,7 @@ url("img/IMG_0418-1.webp") 2x);
 		padding-bottom:6px;
 		border-radius:13px 13px 13px 13px;
 	}
-	.card-body-style{
-		;
-	}
+
 	.img-9-style{
 		height:72px;
 	}
@@ -1020,19 +1019,13 @@ url("img/IMG_0418-1.webp") 2x);
 		background-color:transparent;
 		border-radius:2px 2px 2px 2px;
 	}
-	.오시는길{
+	.way{
 		font-family:"Pretendard-SemiBold";
 		font-size:30px;
 		box-shadow:inset 0.00px -15.00px 0px var(--swatch-var-3969);
 	}
-	.html-widget-style{
-		;
-	}
 	.card-body-sub-contents-style{
 		height:43px;
-	}
-	.img-row’{
-		;
 	}
 	.map-container{
 		height:360px;
@@ -1052,6 +1045,9 @@ url("img/IMG_0418-1.webp") 2x);
 	}
 	.copy-text{
 		font-size:0.7em;
+	}
+	.copy-link{
+		align-items:center;
 	}
 	.img-28-style{
 		width:50px;
@@ -1081,12 +1077,10 @@ url("img/IMG_0418-1.webp") 2x);
 		font-size:2em;
 		letter-spacing:-0.03em;
 	}
-	.h6-오시는길-style{
-		;
-	}
-	.h3-style{
-		font-family:"Pretendard-Bold";
+	.way-method{
+		font-family:"Pretendard-SemiBold";
 		font-size:1.1em;
+		letter-spacing:-0.03em;
 		width:100%;
 	}
 	.h6-14-style{
@@ -1107,39 +1101,37 @@ url("img/IMG_0418-1.webp") 2x);
 		font-family:"Pretendard-Regular";
 	}
 	.h1-03월-22일-토--style{
-		font-family:"Pretendard-Medium";
-		font-size:1.4em;
+		font-family:"Pretendard-Regular";
+		font-size:1.2em;
 		letter-spacing:-0.05em;
 	}
 	.h1-오전-8시-출발-style{
-		font-family:"Pretendard-Bold";
+		font-family:"Pretendard-SemiBold";
 		font-size:1.5em;
 		letter-spacing:-0.04em;
 	}
 	.h1-청주종합경기장-앞-style{
-		font-family:"Pretendard-Bold";
+		font-family:"Pretendard-SemiBold";
 		font-size:1.3em;
 		letter-spacing:-0.03em;
 	}
 	.bus-btn{
 		color:var(--swatch-var-843)!important;
-		font-family:"Pretendard-Medium";
+		font-family:"Pretendard-SemiBold";
 		font-size:1.2em;
 		letter-spacing:-0.03em;
 		text-align:center;
 	}
-	.h1-sub-contents-style{
-		font-family:"Pretendard-Thin";
+	.d-day_title{
+		font-family:"Pretendard-SemiBold";
 		font-size:1.6em;
 		letter-spacing:-0.03em;
-		width:99.55%;
-	}
-	.h1-종윤-영은-결혼식이-style{
-		font-family:"Pretendard-Bold";
-		font-size:2em;
-		box-shadow:inset 0.00px -10.00px 0px var(--swatch-var-3969);
 	}
 	.d-day{
+		font-family:"Pretendard-ExtraBold";
+		font-size:1.15em;
+		letter-spacing:-0.03em;
+
 		box-shadow:inset 0.00px -10.00px 0px var(--swatch-var-3969);
 	}
 	.h6-대절-버스-안내-style{
@@ -1156,12 +1148,14 @@ url("img/IMG_0418-1.webp") 2x);
 	}
 	.card-header{
 		font-family:"Pretendard-SemiBold";
+		background-color:transparent;
 		color:var(--swatch-var-843)!important;
 		border-radius:2px 2px 2px 2px;
 	}
 	.card-header-style{
 		width:100%;
 		height:35px;
+		background-color:transparent;
 		border-radius:1px 1px 1px 1px;
 	}
 	.card-header-link{
@@ -1175,12 +1169,17 @@ url("img/IMG_0418-1.webp") 2x);
 		font-size:0.9em;
 	}
 	.account_link{
-		font-family:"Pretendard-Light";
+		font-family:"Pretendard-Regular";
 		font-size:0.7em;
 		letter-spacing:-0.03em;
 		border: none;
 		background-color:transparent;
 		text-decoration: underline;
+	}
+	.account-header{
+		font-family:"Pretendard-SemiBold";
+		font-size:1em;
+		letter-spacing:-0.03em;
 	}
 	.h6-21-style{
 		font-family:"Pretendard-Regular";
