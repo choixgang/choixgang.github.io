@@ -567,7 +567,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="OO은행 999999999999" class="account_link">OO은행 999999999999</button>
+																<button data-clipboard-text="국민은행 967202-01-297258" class="account_link">국민은행 967202-01-297258</button>
 															</div>
 														</div>
 													</li>
@@ -579,7 +579,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="OO은행 999999999999" class="account_link">OO은행 999999999999</button>
+																<button data-clipboard-text="국민은행 967202-01-042630" class="account_link">국민은행 967202-01-042630</button>
 															</div>
 														</div>
 													</li>
@@ -591,7 +591,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="OO은행 999999999999" class="account_link">OO은행 999999999999</button>
+																<button data-clipboard-text="국민은행 967202-01-005936" class="account_link">국민은행 967202-01-005936</button>
 															</div>
 														</div>
 													</li>
@@ -614,7 +614,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="우리은행 1002686960925" class="account_link">우리은행 1002686960925</button>
+																<button data-clipboard-text="우리은행 1002-686-960925" class="account_link">우리은행 1002-686-960925</button>
 															</div>
 														</div>
 													</li>
@@ -626,7 +626,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="OO은행 999999999999" class="account_link">OO은행 999999999999</button>
+																<button data-clipboard-text="농협은행 903-02-198585" class="account_link">농협은행 903-02-198585</button>
 															</div>
 														</div>
 													</li>
@@ -638,7 +638,7 @@
 																</h6>
 															</div>
 															<div class="mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-																<button data-clipboard-text="OO은행 999999999999" class="account_link">OO은행 999999999999</button>
+																<button data-clipboard-text="부산은행 026-12-020667-4" class="account_link">부산은행 026-12-020667-4</button>
 															</div>
 														</div>
 													</li>
@@ -673,11 +673,16 @@
 </div>
 <!-- sub-contents END -->
 <!-- bloc-3 -->
-<div class="bloc l-bloc full-width-bloc " id="bloc-3">
+<div class="bloc l-bloc full-width-bloc" id="bloc-3">
 	<div class="container bloc-no-padding">
-		<div class="row pe-0 ps-0 pb-0 pt-0 me-0 ms-0 mb-0 mt-0">
+		<div class="row">
 			<div class="col text-start mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-				<picture><source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/thanks_img.png"><img src="img/lazyload-ph.png" data-src="img/thanks_img.png" class="img-fluid mx-auto d-block lazyload" alt="thanks_img.png" width="2238" height="3357"></picture>
+				<picture><source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/thanks_img.png"><img src="img/lazyload-ph.png" data-src="img/thanks_img.png" class="img-fluid mx-auto d-block mb-5 mt-5 lazyload" alt="thanks_img" width="1000" height="1000"></picture>
+				<div class="btnKakaoContainer">
+					<div  class="btnKakao" id="btnKakao">
+						<img class="btnKakao_img" src="img/sns_kakao.png" id="kakao-link-btn" width="26" height="26" alt="카카오톡 링크 공유하기">
+					</div>
+				</div><picture><source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/footer_img.png"><img src="img/lazyload-ph.png" data-src="img/footer_img.png" class="img-fluid mx-auto d-block mt-5 lazyload" alt="footer_img" width="1000" height="400"></picture>
 			</div>
 		</div>
 	</div>
@@ -716,5 +721,18 @@
     });
   </script>
 
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+<script type='text/javascript'>
+    //<![CDATA[
+    // // 사용할 앱의 JavaScript 키를 설정해 주세요.
+    Kakao.init('254ba08a0ab78fa5a9f9bbdc987d63d1');
+    // // 카카오링크 버튼을 생성합니다. 처음 한번만 호출하면 됩니다.
+    Kakao.Link.createScrapButton({
+        container: '#kakao-link-btn',
+        requestUrl: 'https://love-without-end.com',
+        templateId : 114050
+    });
+    //]]>
+</script>
 </body>
 </html>
