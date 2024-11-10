@@ -5,8 +5,7 @@ let playbtn = document.getElementById("playbtn");
 document.addEventListener("scroll", () => {
   if (window.ScrollY > 50) {
     playbtn.click();
-    
-});
+}
 
 
 var playpause = function () {
