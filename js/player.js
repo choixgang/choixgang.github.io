@@ -2,10 +2,11 @@ var player = document.getElementById("player");
 let progress = document.getElementById("progress");
 let playbtn = document.getElementById("playbtn");
 
-window.onload=function(){
-  //실행할 내용
+window.onload=onLoadEvent;
+
+function onLoadEvent(){
   playbtn.click();
-  playpause();
+  player.play();
 }
 
 
