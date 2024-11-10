@@ -1036,6 +1036,123 @@
 			</div>
 		</div>
 		<!-- sub-contents END -->
+
+<!-- bloc-3 -->
+<div class="bloc l-bloc" id="bloc-4">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="text-center mt-5 mb-0 ms-0 me-0 scroll-fx-up-in">
+				<div class = "cong-title-container">
+					<h1 class="text-center cong-title mt-5 mb-0 ms-0 me-0">
+						축하의 마음 전하기
+					</h1>
+				</div>
+
+				<h6 class="mg-md mt-5 mb-5 ms-0 me-0 cong-detail">
+					폭죽을 클릭 해 팡! 터뜨려<br>
+					신랑과 신부에게 축하의 마음을 <br>
+					마구마구 전해 주세요
+				</h6>
+				<div class="btn_confetti">
+					<button class="build">
+					<picture>
+						<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
+						<img src="img/cong_img.jpg" data-src="img/cong_img.jpg" class="img-fluid mx-auto d-block lazyload " alt="placeholder image" width="200" height="200">
+					</picture>
+				</button>
+				</div>
+				<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
+					하트 : {n}
+				</h1>
+				<div class="row">
+					<div class="col">
+						<a href="#" class="btn btn-d btn-lg w-100 write_btn" data-bs-toggle="modal" data-bs-target="#modal-cong"> 메세지 작성 ✏️</a>
+					</div>
+					<div class="col">
+						<a href="#" class="btn btn-d btn-lg w-100 read_btn" data-bs-toggle="modal" data-bs-target="#modal-list"> 메세지 보러가기 📃</a>
+					</div>
+				</div>
+			</div>
+				<div id="modal-cong" class="modal fade modal-cong" tabindex="-1" role="dialog">
+					<div class="modal-dialog  modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="card-body-bloc-3-style modal-body">
+								<form id="form_1" data-form-type="blocs-form" novalidate="" data-success-msg="Your message has been sent." data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+									<div class="form-group mb-3">
+										<label class="form-label">
+											이름
+										</label>
+										<input id="name" class="form-control" required="">
+									</div>
+									<div class="form-group mb-3">
+										<label class="form-label">
+											비밀번호 (삭제 시 필요합니다)
+										</label>
+										<input id="email" class="form-control" type="password" required="">
+									</div>
+									<div class="form-group mb-3">
+										<label class="form-label">
+											축하의 메세지 ❤️
+										</label><textarea id="message" class="form-control" rows="4" cols="50" required=""></textarea>
+									</div>
+									<button class="bloc-button btn btn-d btn-lg w-100 submit_btn" type="submit">
+										보내기 💾
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="modal-list" class="modal fade" tabindex="-1" role="dialog">
+					<div class="modal-dialog  modal-dialog-centered" role="document">
+						<div class=" modal-content">
+							<div class="modal-body" style="max-height: calc(100vh - 200px); overflow-x: hidden; overflow-y: auto;">
+								<ul class="list-unstyled">
+									<li>
+										<h3 class="mg-md">
+											<span class="fa fa-star"></span> Heading content
+										</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+										</p>
+									</li>
+									<li>
+										<h3 class="mg-md">
+											<span class="fa fa-star"></span> Heading content
+										</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+										</p>
+									</li>
+									<li>
+										<h3 class="mg-md">
+											<span class="fa fa-star"></span> Heading content
+										</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+										</p>
+									</li>
+									<li>
+										<h3 class="mg-md">
+											<span class="fa fa-star"></span> Heading content
+										</h3>
+										<p>
+											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
+										</p>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-3 END -->
+
+
+
 		<!-- bloc-3 -->
 		<div class="bloc l-bloc full-width-bloc" id="bloc-3">
 			<div class="container bloc-no-padding">
@@ -1108,7 +1225,10 @@
 	<script src="./js/blocs.min.js?4754"></script>
 	<script src="./js/lazysizes.min.js" defer></script>
 	<script src="./js/scrollFX.js?445"></script>
+	<script src="./js/formHandler.js?9505"></script>
+	<script src="./js/jqBootstrapValidation.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 	<!-- Additional JS END -->
 
 	<script>

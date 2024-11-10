@@ -1617,7 +1617,6 @@ a {
 		width: 100%;
 		position: relative;
 		display: flex;
-		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
@@ -1735,4 +1734,69 @@ a {
     background-color: #18a8f1;
     transition: all 1s linear;
     height: 100%;
+}
+
+.img-40-style{
+	width:135px;
+}
+.card-body-bloc-3-style{
+	width:100%;
+}
+.checkbox-style{
+	width:100%;
+}
+.cong-title-container{
+	text-align : center;
+
+}
+
+.cong-detail
+{
+	font-family: "Pretendard-Regular";
+
+	font-size: 1em;
+	letter-spacing: -0.03em;
+}
+.cong-title
+{
+	font-family: "Pretendard-SemiBold";
+
+	font-size: 2em;
+	letter-spacing: -0.03em;
+}
+
+.heart-cnt{
+	font-family: "Pretendard-SemiBold";
+	font-size: 1.3em;
+	letter-spacing: -0.03em;
+}
+
+.submit_btn{
+	background-color: #18a8f1;
+}
+
+.write_btn{
+	background-color: #18a8f1;
+	font-family: "Pretendard-SemiBold";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+
+}
+
+.read_btn{
+	font-family: "Pretendard-SemiBold";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+}
+
+.modal-cong{
+	font-family: "Pretendard-SemiBold";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+}
+
+.build{
+	border: none;
+	margin: 0;
+	background-color: hsl(0, 0%, 100%);
 }
