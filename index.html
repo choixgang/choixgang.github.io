@@ -1054,12 +1054,12 @@
 					마구마구 전해 주세요
 				</h6>
 				<div class="btn_confetti">
-					<button class="build">
-					<picture>
-						<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
-						<img src="img/cong_img.jpg" data-src="img/cong_img.jpg" class="img-fluid mx-auto d-block lazyload " alt="placeholder image" width="200" height="200">
-					</picture>
-				</button>
+					<button class="build" id="confetti_btn">
+						<picture>
+							<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
+							<img src="img/cong_img.jpg" data-src="img/cong_img.jpg" class="img-fluid mx-auto d-block lazyload " alt="placeholder image" width="150" height="150">
+						</picture>
+					</button>
 				</div>
 				<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
 					하트 : {n}
@@ -1230,6 +1230,23 @@
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 	<!-- Additional JS END -->
+
+	<script>
+		const jsConfetti = new JSConfetti();
+		document.querySelector(".build").addEventListener("click", async () => {
+			await jsConfetti.addConfetti({
+				confettiNumber: 300,
+				confettiColors: [
+					"#ff0a54",
+					"#ff477e",
+					"#ff7096",
+					"#ff85a1",
+					"#fbb1bd",
+					"#f9bec7",
+				],
+			});
+		});
+	</script>
 
 	<script>
 		var btns = document.querySelectorAll('button');
