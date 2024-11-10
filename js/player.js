@@ -5,6 +5,7 @@ let playbtn = document.getElementById("playbtn");
 window.onload=function(){
   //실행할 내용
   playbtn.click();
+  playpause();
 }
 
 
