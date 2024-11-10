@@ -2,10 +2,16 @@ var player = document.getElementById("player");
 let progress = document.getElementById("progress");
 let playbtn = document.getElementById("playbtn");
 
-document.addEventListener("scroll", () => {
-  if (window.ScrollY > 50) {
+window.addEventListener('scroll', function() {
+  const posY = this.window.pageYOffset;
+  const block1 = this.document.querySelector('#bloc-1').getBoundingClientRect().top;
+
+  const homeTop = posY + block1;
+
+  if(posY >= homeTop){
     playbtn.click();
-}
+  }
+});
 
 
 var playpause = function () {
