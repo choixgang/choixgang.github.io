@@ -1304,8 +1304,6 @@
 
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
-		const analytics = getAnalytics(app);
-		var comments = firebase.database().ref().child('comments');
 
 		document.getElementById('submit_btn').addEventListener('click', (event) => {
 			event.preventDefault()
@@ -1327,6 +1325,12 @@
 					console.log(doc.data())
 				})
 			})
+
+			alert('제출완료');
+			commentName = null;
+			commentPassword = null;
+			commentMsg = null;
+			
 		})
 	</script>
 </body>
