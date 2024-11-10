@@ -2,16 +2,10 @@ var player = document.getElementById("player");
 let progress = document.getElementById("progress");
 let playbtn = document.getElementById("playbtn");
 
-window.addEventListener('scroll', function() {
-  const posY = this.window.pageYOffset;
-  const block1 = this.document.querySelector('#bloc-1').getBoundingClientRect().top;
-
-  const homeTop = posY + block1;
-
-  if(posY >= homeTop){
-    playbtn.click();
-  }
-});
+window.onload=function(){
+  //실행할 내용
+  playbtn.click();
+}
 
 
 var playpause = function () {
