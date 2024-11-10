@@ -1036,112 +1036,92 @@
 		</div>
 		<!-- sub-contents END -->
 
-<!-- bloc-3 -->
-<div class="bloc l-bloc" id="bloc-4">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="text-center mt-5 mb-0 ms-0 me-0 scroll-fx-up-in">
-				<div class = "cong-title-container">
-					<h1 class="text-center cong-title mt-5 mb-0 ms-0 me-0">
-						축하의 마음 전하기
-					</h1>
-				</div>
-
-				<h6 class="mg-md mt-5 mb-5 ms-0 me-0 cong-detail">
-					폭죽을 클릭 해 팡! 터뜨려<br>
-					신랑과 신부에게 축하의 마음을 <br>
-					마구마구 전해 주세요
-				</h6>
-				<div class="btn_confetti">
-					<button class="build" id="confetti_btn">
-						<picture>
-							<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
-							<img src="img/cong_img.jpg" data-src="img/cong_img.jpg" class="img-fluid mx-auto d-block lazyload " alt="placeholder image" width="150" height="150">
-						</picture>
-					</button>
-				</div>
-				<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
-					하트 : {n}
-				</h1>
-				<p id="demo">A Paragraph.</p>
-				<pre id="object"></pre>
+		<!-- bloc-3 -->
+		<div class="bloc l-bloc" id="bloc-4">
+			<div class="container bloc-lg">
 				<div class="row">
-					<div class="col">
-						<a href="#" class="btn btn-d btn-lg w-100 write_btn" data-bs-toggle="modal" data-bs-target="#modal-cong"> 메세지 작성 ✏️</a>
-					</div>
-					<div class="col">
-						<a href="#" class="btn btn-d btn-lg w-100 read_btn" data-bs-toggle="modal" data-bs-target="#modal-list"> 메세지 보러가기 📃</a>
-					</div>
-				</div>
-			</div>
-				<div id="modal-cong" class="modal fade modal-cong" tabindex="-1" role="dialog">
-					<div class="modal-dialog  modal-dialog-centered" role="document">
-						<div class="modal-content">
-							<div class="card-body-bloc-3-style modal-body">
-								<form id="form_1" data-form-type="blocs-form" novalidate="" data-success-msg="Your message has been sent." data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
-									<div class="form-group mb-3">
-										<label class="form-label" >
-											이름
-										</label>
-										<input id="commentName" class="form-control" required="">
-									</div>
-									<div class="form-group mb-3">
-										<label class="form-label">
-											비밀번호 (삭제 시 필요합니다)
-										</label>
-										<input id="commentPW" type="number" inputmode="numeric" class="form-control input-number-password" required=""/>
-									</div>
-									<div class="form-group mb-3">
-										<label class="form-label">
-											축하의 메세지 ❤️
-										</label><textarea id="commentMsg" class="form-control" rows="4" cols="50" required=""></textarea>
-									</div>
-									<button class="bloc-button btn btn-d btn-lg w-100 submit_btn" id="submit_btn" type="submit">
-										보내기 💾
-									</button>
-								</form>
+					<div class="text-center mt-5 mb-0 ms-0 me-0 scroll-fx-up-in">
+						<div class="cong-title-container">
+							<h1 class="text-center cong-title mt-5 mb-0 ms-0 me-0">
+								축하의 마음 전하기
+							</h1>
+						</div>
+
+						<h6 class="mg-md mt-5 mb-5 ms-0 me-0 cong-detail">
+							폭죽을 클릭 해 팡! 터뜨려<br>
+							신랑과 신부에게 축하의 마음을 <br>
+							마구마구 전해 주세요
+						</h6>
+						<div class="btn_confetti vibration">
+							<button class="build" id="confetti_btn">
+								<picture>
+									<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
+									<img src="img/cong_img.jpg" data-src="img/cong_img.jpg"
+										class="img-fluid mx-auto d-block lazyload " alt="placeholder image" width="150"
+										height="150">
+								</picture>
+							</button>
+						</div>
+						<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
+							하트 : {n}
+						</h1>
+						<p id="demo">A Paragraph.</p>
+						<pre id="object"></pre>
+						<div class="row" id="btn_wrap">
+							<div class="col">
+								<a href="#" class="btn btn-d btn-lg w-100 write_btn" data-bs-toggle="modal"
+									data-bs-target="#modal-cong"> 메세지 작성 ✏️</a>
+							</div>
+							<div class="col">
+								<a href="#" class="btn btn-d btn-lg w-100 read_btn" data-bs-toggle="modal"
+									data-bs-target="#modal-list" id="readBtn"> 메세지 보러가기 📝</a>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div id="modal-list" class="modal fade" tabindex="-1" role="dialog">
-					<div class="modal-dialog  modal-dialog-centered" role="document">
-						<div class=" modal-content">
-							<div class="modal-body" style="max-height: calc(100vh - 200px); overflow-x: hidden; overflow-y: auto;">
-								<ul class="list-unstyled">
-									<li>
-										<h3 class="mg-md">
-											<span class="fa fa-star"></span> Heading content
-										</h3>
-										<p>
-											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-										</p>
-									</li>
-									<li>
-										<h3 class="mg-md">
-											<span class="fa fa-star"></span> Heading content
-										</h3>
-										<p>
-											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-										</p>
-									</li>
-									<li>
-										<h3 class="mg-md">
-											<span class="fa fa-star"></span> Heading content
-										</h3>
-										<p>
-											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-										</p>
-									</li>
-									<li>
-										<h3 class="mg-md">
-											<span class="fa fa-star"></span> Heading content
-										</h3>
-										<p>
-											Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-										</p>
-									</li>
-								</ul>
+					<div id="modal-cong" class="modal fade modal-cong" tabindex="-1" role="dialog">
+						<div class="modal-dialog  modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="card-body-bloc-3-style modal-body">
+									<form id="form_1" data-form-type="blocs-form" novalidate=""
+										data-success-msg="Your message has been sent."
+										data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
+										<div class="form-group mb-3">
+											<label class="form-label">
+												이름
+											</label>
+											<input id="commentName" class="form-control" required="">
+										</div>
+										<div class="form-group mb-3">
+											<label class="form-label">
+												비밀번호 (삭제 시 필요합니다)
+											</label>
+											<input id="commentPW" type="number" inputmode="numeric"
+												class="form-control input-number-password" required="" />
+										</div>
+										<div class="form-group mb-3">
+											<label class="form-label">
+												축하의 메세지 ❤️
+											</label><textarea id="commentMsg" class="form-control" rows="4" cols="50"
+												required=""></textarea>
+										</div>
+										<button class="bloc-button btn btn-d btn-lg w-100 submit_btn" id="submit_btn"
+											type="submit">
+											보내기 ✉️
+										</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id="modal-list" class="modal fade" tabindex="-1" role="dialog">
+						<div class="modal-dialog  modal-dialog-centered" role="document">
+							<div class=" modal-content">
+								<div class="modal-body"
+									style="max-height: calc(100vh - 200px); overflow-x: hidden; overflow-y: auto;">
+									<div class="commentContainer mt-3">
+										<!-- Contents will be filled -->
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -1149,79 +1129,79 @@
 			</div>
 		</div>
 	</div>
-</div>
-<!-- bloc-3 END -->
+	</div>
+	<!-- bloc-3 END -->
 
 
 
-		<!-- bloc-3 -->
-		<div class="bloc l-bloc full-width-bloc" id="bloc-3">
-			<div class="container bloc-no-padding">
-				<div class="row">
-					<div class="col text-start mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
-						<picture>
-							<source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/thanks_img.png"><img
-								src="img/lazyload-ph.png" data-src="img/thanks_img.png"
-								class="img-fluid mx-auto d-block mb-5 mt-5 lazyload" alt="thanks_img" width="1000"
-								height="1000">
-						</picture>
-						<div class="btnKakaoContainer">
-							<div class="btnKakao">
-								<a href="javascript:shareMessage()">
-									<div class="btnKakao_img" id="kakao-link-btn">
-										<img src="img/sns_kakao.png" alt="카카오톡 공유" width="100%">
-									</div>
-								</a>
-							</div>
+	<!-- bloc-3 -->
+	<div class="bloc l-bloc full-width-bloc" id="bloc-3">
+		<div class="container bloc-no-padding">
+			<div class="row">
+				<div class="col text-start mt-0 mb-0 ms-0 me-0 pt-0 pb-0 ps-0 pe-0">
+					<picture>
+						<source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/thanks_img.png"><img
+							src="img/lazyload-ph.png" data-src="img/thanks_img.png"
+							class="img-fluid mx-auto d-block mb-5 mt-5 lazyload" alt="thanks_img" width="1000"
+							height="1000">
+					</picture>
+					<div class="btnKakaoContainer">
+						<div class="btnKakao">
+							<a href="javascript:shareMessage()">
+								<div class="btnKakao_img" id="kakao-link-btn">
+									<img src="img/sns_kakao.png" alt="카카오톡 공유" width="100%">
+								</div>
+							</a>
 						</div>
-						<picture>
-							<source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/footer_img.png"><img
-								src="img/lazyload-ph.png" data-src="img/footer_img.png"
-								class="img-fluid mx-auto d-block mt-5 lazyload" alt="footer_img" width="1000"
-								height="400">
-						</picture>
 					</div>
+					<picture>
+						<source type="image/png" srcset="img/lazyload-ph.png" data-srcset="img/footer_img.png"><img
+							src="img/lazyload-ph.png" data-src="img/footer_img.png"
+							class="img-fluid mx-auto d-block mt-5 lazyload" alt="footer_img" width="1000" height="400">
+					</picture>
 				</div>
 			</div>
 		</div>
-		<!-- bloc-3 END -->
-		
-		<!-- ScrollToTop Button -->
-		<button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop"
-			onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-				viewBox="0 0 32 32">
-				<path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13" />
-			</svg></button>
-		<!-- ScrollToTop Button END-->
-		
-		<!-- Floating Buttons -->
-		<div class='float-button-container'>
-			<audio autoplay id="player" src="./music/music.m4a"></audio>
-			<div class="player">
-				<div class="control">
-					<i class="fas fa-play" id="playbtn"></i>
-				</div>
-				<div class="info">
-					그라데이션 - 10cm
-					<div class="bar">
-						<div id="progress"></div>
-					</div>
-				</div>
-		
-				<div id="current">0:00</div>
+	</div>
+	<!-- bloc-3 END -->
+
+	<!-- ScrollToTop Button -->
+	<button aria-label="Scroll to top button" class="bloc-button btn btn-d scrollToTop"
+		onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+			viewBox="0 0 32 32">
+			<path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13" />
+		</svg></button>
+	<!-- ScrollToTop Button END-->
+
+	<!-- Floating Buttons -->
+	<div class='float-button-container'>
+		<audio autoplay id="player" src="./music/music.m4a"></audio>
+		<div class="player">
+			<div class="control">
+				<i class="fas fa-play" id="playbtn"></i>
 			</div>
-		
-			<script src="./js/player.js"></script>
+			<div class="info">
+				그라데이션 - 10cm
+				<div class="bar">
+					<div id="progress"></div>
+				</div>
+			</div>
+
+			<div id="current">0:00</div>
 		</div>
-		<!-- Floating Buttons End -->
-		
-		
-		</div>
-		<!-- Main container END -->
+
+		<script src="./js/player.js"></script>
+	</div>
+	<!-- Floating Buttons End -->
+
+
+	</div>
+	<!-- Main container END -->
 
 
 
 	<!-- Additional JS -->
+	<script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 	<script src="./js/bootstrap.bundle.min.js?8837"></script>
 	<script src="./js/blocs.min.js?4754"></script>
 	<script src="./js/lazysizes.min.js" defer></script>
@@ -1234,7 +1214,7 @@
 	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
-	
+
 	<!-- Additional JS END -->
 
 	<script>
@@ -1284,8 +1264,6 @@
 
 	<script type="module">
 		// Import the functions you need from the SDKs you need
-		import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
-		import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
 		// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -1305,6 +1283,8 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 
+		const db = firebase.firestore();
+
 		document.getElementById('submit_btn').addEventListener('click', (event) => {
 			event.preventDefault()
 			const commentName = document.getElementById('commentName').value
@@ -1314,7 +1294,6 @@
 
 			console.log(commentName, commentPassword, commentMsg)
 
-			const db = firebase.firestore();
 			db.collection('comments').add({
 				name: commentName,
 				password: commentPassword,
@@ -1326,11 +1305,76 @@
 			document.getElementById('commentName').value = null;
 			document.getElementById('commentPW').value = null;
 			document.getElementById('commentMsg').value = null;
-			
-		})
+
+		});
 
 
-		document.getElementById
+		window.onload = function () {
+			document.querySelector("#btn_wrap #readBtn").addEventListener('click', (e) => {
+				db.collection('comments').orderBy("timestamp", "desc").get().then((result) => {
+					result.forEach((doc) => {
+						console.log(doc.data())
+
+						const day = doc.data().timestamp.toDate()
+						var year = day.getFullYear();
+						var month = ('0' + (day.getMonth() + 1)).slice(-2);
+						var days = ('0' + day.getDate()).slice(-2);
+						var dateString = year + '-' + month + '-' + days + '   ';
+
+						var hours = ('0' + day.getHours()).slice(-2);
+						var minutes = ('0' + day.getMinutes()).slice(-2);
+						var seconds = ('0' + day.getSeconds()).slice(-2);
+						var timeString = hours + ':' + minutes + ':' + seconds;
+						var timeData = dateString + timeString;
+
+						var template = `<div id="comments_card" class="comments_card">
+									<div class="comment_inner">
+										<div class="flex-grow-1 p-4 card_front">
+											<h5 class="comment_message">${doc.data().contents}</h5>
+											<p class="comment_name">${doc.data().name}</p>
+											<p class="comment_date">${timeData}</p>
+										</div>
+										<div class="card_back">
+											<p class="delete_title mt-5 ms-3">삭제 비밀번호를 입력하세요</p>
+											<input id="inputPW" type="number" inputmode="numeric" class="input-number-password ms-3"/>
+											<button class="comments_delete" onclick="const inputPW = document.getElementById('inputPW').value
+
+							if (doc.data().password == inputPW) {
+								alert('메세지를 삭제합니다.')
+							}
+							else {
+								alert('비밀번호가 일치하지 않습니다.')
+							}"> 삭제 </button>
+										</div>
+										</div>
+									</div>`;
+						$('.commentContainer').append(template)
+
+
+						inputPW.onload = function () {
+							function deleteFunc() {
+							const inputPW = document.getElementById('inputPW').value
+
+							if (doc.data().password == inputPW) {
+								alert("메세지를 삭제합니다.")
+							}
+							else {
+								alert("비밀번호가 일치하지 않습니다.")
+							}
+						}
+						}
+
+					})
+				})
+			});
+
+
+
+
+		}
+
+
+
 	</script>
 </body>
 

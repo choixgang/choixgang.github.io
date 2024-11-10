@@ -1750,6 +1750,20 @@ a {
 
 }
 
+.vibration
+{
+	animation: vibration 0.5s infinite;
+}
+
+@keyframes vibration {
+  from {
+    transform: rotate(5deg);
+  }
+  to {
+    transform: rotate(-5deg);
+  }
+}
+
 .cong-detail
 {
 	font-family: "Pretendard-Regular";
@@ -1795,6 +1809,12 @@ a {
 	letter-spacing: -0.03em;
 }
 
+.modal-list{
+	font-family: "Pretendard-SemiBold";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+}
+
 .build{
 	border: none;
 	margin: 0;
@@ -1805,4 +1825,86 @@ a {
 
 .input-number-password{
 	-webkit-text-security: disc;
+}
+
+.comments_card{
+	display:flex;
+	flex-direction:column; 
+	justify-content:space-between;
+	width:100%;
+	gap:24px;
+	border:1px solid #ebeaec;
+	box-shadow:0px 2px 4px rgba(0,0,0,0.3);
+	border-radius:6px;
+
+	margin-bottom: 10px;
+	perspective: 500px;
+
+  
+}
+
+#comments_card .comment_inner {
+    width: 100%;
+    height: 100%;
+    transition: all .5s;
+    transform-style: preserve-3d;
+}
+
+#comments_card:hover .comment_inner {
+    transform: rotateY(180deg);
+}
+
+.card_back, .card_front {
+	width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.card_back {
+	position: absolute;
+	left:0;
+	top:0;
+    background-color: #a1ddfc;
+	border:1px solid #ebeaec;
+	border-radius:6px;
+    z-index: 5;
+    transform: rotateY(180deg);
+}
+
+.comment_message{
+	font-family: "Pretendard-SemiBold";
+	font-size: 1.2em;
+	letter-spacing: -0.03em;
+	color: #18a8f1
+}
+
+.comment_name{
+	font-family: "Pretendard-Regular";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+	color:#727174;
+}
+
+.comment_date{
+	font-family: "Pretendard-Regular";
+	font-size: 0.8em;
+	letter-spacing: -0.03em;
+	color:#b4b4b6;
+}
+
+.delete_title{
+	font-family: "Pretendard-Regular";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+	color:#727174;
+}
+
+.comments_delete{
+	font-family: "Pretendard-Regular";
+	font-size: 1em;
+	letter-spacing: -0.03em;
+	color:#ffffff;
+	background-color: #00aaff;
+	border:1px solid #ebeaec;
+	border-radius:6px;
 }
