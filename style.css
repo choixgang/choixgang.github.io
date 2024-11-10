@@ -1864,7 +1864,7 @@ a {
 	position: absolute;
 	left:0;
 	top:0;
-    background-color: #a1ddfc;
+    background-color: #00aaff;
 	border:1px solid #ebeaec;
 	border-radius:6px;
     z-index: 5;
@@ -1896,7 +1896,7 @@ a {
 	font-family: "Pretendard-Regular";
 	font-size: 1em;
 	letter-spacing: -0.03em;
-	color:#727174;
+	color:#ffffff;
 }
 
 .comments_delete{
@@ -1907,4 +1907,11 @@ a {
 	background-color: #00aaff;
 	border:1px solid #ebeaec;
 	border-radius:6px;
+	box-shadow:0px 2px 4px rgba(0,0,0,0.3);
+}
+
+.inputPW{
+	 background-color: rgba(255, 255, 255, 0.75);
+	 border:1px solid #ebeaec;
+	 border-radius:6px;
 }
