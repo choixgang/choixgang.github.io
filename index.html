@@ -1310,6 +1310,7 @@
 			const commentName = document.getElementById('commentName').value
 			const commentPassword = document.getElementById('commentPW').value
 			const commentMsg = document.getElementById('commentMsg').value
+			const commentTiem = new Date()
 
 			console.log(commentName, commentPassword, commentMsg)
 
@@ -1317,7 +1318,8 @@
 			db.collection('comments').add({
 				name: commentName,
 				password: commentPassword,
-				contents: commentMsg
+				contents: commentMsg,
+				timestamp: commentTime
 			})
 
 			db.collection('comments').get().then((result) => {
@@ -1327,9 +1329,9 @@
 			})
 
 			alert('제출완료');
-			commentName = null;
-			commentPassword = null;
-			commentMsg = null;
+			document.getElementById('commentName').value = null;
+			document.getElementById('commentPW').value = null;
+			document.getElementById('commentMsg').value = null;
 			
 		})
 	</script>
