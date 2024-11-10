@@ -22,7 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css?8969">
 	<link rel="stylesheet" type="text/css" href="./css/animate.min.css?4408">
 	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/(null).css">
 
 	<title>Home</title>
 
@@ -1064,6 +1063,8 @@
 				<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
 					하트 : {n}
 				</h1>
+				<p id="demo">A Paragraph.</p>
+				<pre id="object"></pre>
 				<div class="row">
 					<div class="col">
 						<a href="#" class="btn btn-d btn-lg w-100 write_btn" data-bs-toggle="modal" data-bs-target="#modal-cong"> 메세지 작성 ✏️</a>
@@ -1079,23 +1080,23 @@
 							<div class="card-body-bloc-3-style modal-body">
 								<form id="form_1" data-form-type="blocs-form" novalidate="" data-success-msg="Your message has been sent." data-fail-msg="Sorry it seems that our mail server is not responding, Sorry for the inconvenience!">
 									<div class="form-group mb-3">
-										<label class="form-label">
+										<label class="form-label" >
 											이름
 										</label>
-										<input id="name" class="form-control" required="">
+										<input id="commentName" class="form-control" required="">
 									</div>
 									<div class="form-group mb-3">
 										<label class="form-label">
 											비밀번호 (삭제 시 필요합니다)
 										</label>
-										<input id="email" class="form-control" type="password" required="">
+										<input id="commentPW" class="form-control" type="password" required="">
 									</div>
 									<div class="form-group mb-3">
 										<label class="form-label">
 											축하의 메세지 ❤️
-										</label><textarea id="message" class="form-control" rows="4" cols="50" required=""></textarea>
+										</label><textarea id="commentMsg" class="form-control" rows="4" cols="50" required=""></textarea>
 									</div>
-									<button class="bloc-button btn btn-d btn-lg w-100 submit_btn" type="submit">
+									<button class="bloc-button btn btn-d btn-lg w-100 submit_btn" id="submit_btn" type="submit">
 										보내기 💾
 									</button>
 								</form>
@@ -1229,6 +1230,11 @@
 	<script src="./js/jqBootstrapValidation.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-firestore.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-storage.js"></script>
+	
 	<!-- Additional JS END -->
 
 	<script>
@@ -1274,6 +1280,54 @@
 			templateId: 114050
 		});
 		//]]>
+	</script>
+
+	<script type="module">
+		// Import the functions you need from the SDKs you need
+		import { initializeApp } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-app.js";
+		import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-analytics.js";
+		// TODO: Add SDKs for Firebase products that you want to use
+		// https://firebase.google.com/docs/web/setup#available-libraries
+
+		// Your web app's Firebase configuration
+		// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+		const firebaseConfig = {
+			apiKey: "AIzaSyCs4eAyjCAK1LxK-OaP_9JJPkbU2vn9L8w",
+			authDomain: "mobile-wedding-46f67.firebaseapp.com",
+			databaseURL: "https://mobile-wedding-46f67-default-rtdb.asia-southeast1.firebasedatabase.app",
+			projectId: "mobile-wedding-46f67",
+			storageBucket: "mobile-wedding-46f67.firebasestorage.app",
+			messagingSenderId: "51159225974",
+			appId: "1:51159225974:web:b88d3b26c1353e7fc9f157",
+			measurementId: "G-82B1NY6P9N"
+		};
+
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		const analytics = getAnalytics(app);
+		var comments = firebase.database().ref().child('comments');
+
+		document.getElementById('submit_btn').addEventListener('click', (event) => {
+			event.preventDefault()
+			const commentName = document.getElementById('commentName').value
+			const commentPassword = document.getElementById('commentPW').value
+			const commentMsg = document.getElementById('commentMsg').value
+
+			console.log(commentName, commentPassword, commentMsg)
+
+			const db = firebase.firestore();
+			db.collection('comments').add({
+				name: commentName,
+				password: commentPassword,
+				contents: commentMsg
+			})
+
+			db.collection('comments').get().then((result) => {
+				result.forEach((doc) => {
+					console.log(doc.data())
+				})
+			})
+		})
 	</script>
 </body>
 
