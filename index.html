@@ -1089,7 +1089,7 @@
 										<label class="form-label">
 											비밀번호 (삭제 시 필요합니다)
 										</label>
-										<input id="commentPW" class="form-control" type="password" required="">
+										<input id="commentPW" type="number" inputmode="numeric" class="form-control input-number-password" required=""/>
 									</div>
 									<div class="form-group mb-3">
 										<label class="form-label">
@@ -1310,7 +1310,7 @@
 			const commentName = document.getElementById('commentName').value
 			const commentPassword = document.getElementById('commentPW').value
 			const commentMsg = document.getElementById('commentMsg').value
-			const commentTiem = new Date()
+			const commentTime = new Date()
 
 			console.log(commentName, commentPassword, commentMsg)
 
@@ -1322,18 +1322,15 @@
 				timestamp: commentTime
 			})
 
-			db.collection('comments').get().then((result) => {
-				result.forEach((doc) => {
-					console.log(doc.data())
-				})
-			})
-
 			alert('제출완료');
 			document.getElementById('commentName').value = null;
 			document.getElementById('commentPW').value = null;
 			document.getElementById('commentMsg').value = null;
 			
 		})
+
+
+		document.getElementById
 	</script>
 </body>
 

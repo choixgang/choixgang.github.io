@@ -1802,3 +1802,7 @@ a {
 	cursor: pointer;
 
 }
+
+.input-number-password{
+	-webkit-text-security: disc;
+}
