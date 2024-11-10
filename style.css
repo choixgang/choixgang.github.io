@@ -600,7 +600,7 @@ button {
 	height: 36px;
 	padding: 5px;
 	position: fixed;
-	bottom: 20px;
+	bottom: 30px;
 	right: 20px;
 	opacity: 0;
 	z-index: 999;
@@ -1722,8 +1722,13 @@ a {
 }
 
 .bar {
+    --space: -4px;
     background-color: #24242424;
     overflow: hidden;
+    left: var(--space);
+    right: var(--space);
+    top: var(--space);
+    bottom: var(--space);
     position: absolute;
     border-radius: 64px;
     z-index: -2;
