@@ -3,7 +3,7 @@ let progress = document.getElementById("progress");
 let playbtn = document.getElementById("playbtn");
 
 window.onload = function(){
-  playbtn.click();
+  document.getElementById("playbtn").click();
 };
 
 var playpause = function () {
