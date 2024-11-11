@@ -1328,34 +1328,39 @@
 						var timeData = dateString + timeString;
 
 						var template = `<div id="comments_card" class="comments_card">
-									<div class="comment_inner">
-										<div class="flex-grow-1 p-4 card_front">
-											<h5 class="comment_message">${doc.data().contents}</h5>
-											<p class="comment_name">${doc.data().name}</p>
-											<p class="comment_date">${timeData}</p>
-										</div>
-										<div class="card_back">
-											<p class="delete_title mt-5 ms-3">삭제 비밀번호를 입력하세요</p>
-											<input id="inputPW" type="number" inputmode="numeric" class="input-number-password ms-3 inputPW"/>
-											<button class="comments_delete" onclick="deleteFunc()"> 삭제 </button>
-										</div>
-										</div>
-									</div>`;
+											<div class="delete-info object-hidden">
+												<div class="row">
+													<div class="col">
+														<label class="form-label">Label</label>
+													</div>
+													<div class="col">
+														<div class="form-group mb-3">
+															<input class="form-control">
+														</div>
+													</div>
+													<div class="col">
+														<button href="index.html" class="btn btn-d btn-lg"> 삭제 </button>
+													</div>
+												</div>
+											</div>
+											<div class="comment_inner">
+												<div class="flex-grow-1 p-4">
+													<button id="" class="btn btn-d btn-lg float-end btn-style delete-menu-btn" data-toggle-visibility="delete-info">X</button>
+													<h5 class="comment_message">${doc.data().contents}</h5>
+													<p class="comment_name">${doc.data().name}</p>
+													<p class="comment_date">${timeData}</p>
+												</div>
+											</div>
+										</div>`;
 						$('.commentContainer').append(template)
 
-							function deleteFunc() {
-							const inputPW = document.getElementById('inputPW').value
-
-							if (doc.data().password == inputPW) {
-								alert("메세지를 삭제합니다.")
-							}
-							else {
-								alert("비밀번호가 일치하지 않습니다.")
-							}
-						}
-						
-
 					})
+
+					
+					$(document).on("click",".delete-menu-btn", function () {
+							alert('delete btn click!')
+							console.log(doc.data().id)
+						})
 				})
 			});
 

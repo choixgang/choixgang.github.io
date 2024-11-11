@@ -1843,34 +1843,6 @@ a {
   
 }
 
-#comments_card .comment_inner {
-    width: 100%;
-    height: 100%;
-    transition: all .5s;
-    transform-style: preserve-3d;
-}
-
-#comments_card:hover .comment_inner {
-    transform: rotateY(180deg);
-}
-
-.card_back, .card_front {
-	width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-}
-
-.card_back {
-	position: absolute;
-	left:0;
-	top:0;
-    background-color: #00aaff;
-	border:1px solid #ebeaec;
-	border-radius:6px;
-    z-index: 5;
-    transform: rotateY(180deg);
-}
-
 .comment_message{
 	font-family: "Pretendard-SemiBold";
 	font-size: 1.2em;
@@ -1914,4 +1886,22 @@ a {
 	 background-color: rgba(255, 255, 255, 0.75);
 	 border:1px solid #ebeaec;
 	 border-radius:6px;
+}
+
+/* Hide Object */
+.object-hidden{
+	display:none;
+}
+
+.delete-menu-btn{
+	background-color: rgba(255, 255, 255, 0.25);
+	border:1px solid #ebeaec;
+	border-radius:6px;
+	color:#727174;
+	width: 20px;
+	height: 20px;
+	font-family: "Pretendard-Regular";
+	font-size: 0.5em;
+	padding: 0px;
+	margin: 0px;
 }
