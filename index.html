@@ -1459,7 +1459,7 @@
 				var a = 0
 				$('.commentContainer').empty()
 				const db = firebase.firestore();
-				db.collection('comments').get().then((result) => {
+				db.collection('comments').orderBy("timestamp","desc").get().then((result) => {
 					result.forEach((doc) => {
 						dataID.push(doc.id)
 
