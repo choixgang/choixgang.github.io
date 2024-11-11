@@ -1256,8 +1256,157 @@
 		});
 		//]]>
 	</script>
+		<script>
+			// Import the functions you need from the SDKs you need
+			// TODO: Add SDKs for Firebase products that you want to use
+			// https://firebase.google.com/docs/web/setup#available-libraries
+	
+			// Your web app's Firebase configuration
+			// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+			const firebaseConfig = {
+				apiKey: "AIzaSyCs4eAyjCAK1LxK-OaP_9JJPkbU2vn9L8w",
+				authDomain: "mobile-wedding-46f67.firebaseapp.com",
+				databaseURL: "https://mobile-wedding-46f67-default-rtdb.asia-southeast1.firebasedatabase.app",
+				projectId: "mobile-wedding-46f67",
+				storageBucket: "mobile-wedding-46f67.firebasestorage.app",
+				messagingSenderId: "51159225974",
+				appId: "1:51159225974:web:b88d3b26c1353e7fc9f157",
+				measurementId: "G-82B1NY6P9N"
+			};
+	
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+	
+			const db = firebase.firestore()
+	
+			document.getElementById('submit_btn').addEventListener('click', (event) => {
+				event.preventDefault()
+				const commentName = document.getElementById('commentName').value
+				const commentPassword = document.getElementById('commentPW').value
+				const commentMsg = document.getElementById('commentMsg').value
+				const commentTime = new Date()
+	
+				console.log(commentName, commentPassword, commentMsg)
+	
+				db.collection('comments').add({
+					name: commentName,
+					password: commentPassword,
+					contents: commentMsg,
+					timestamp: commentTime
+				})
+	
+				alert('제출완료');
+				document.getElementById('commentName').value = null;
+				document.getElementById('commentPW').value = null;
+				document.getElementById('commentMsg').value = null;
+	
+			})
+	
+			var dataID = []
+			window.onload = function () {
+				document.getElementById('readBtn').addEventListener('click', (event) => {
+					var a = 0
+					$('.commentContainer').empty()
+					const db = firebase.firestore();
+					db.collection('comments').get().then((result) => {
+						result.forEach((doc) => {
+							dataID.push(doc.id)
+	
+							const day = doc.data().timestamp.toDate()
+							var year = day.getFullYear();
+							var month = ('0' + (day.getMonth() + 1)).slice(-2);
+							var days = ('0' + day.getDate()).slice(-2);
+							var dateString = year + '-' + month + '-' + days + '   ';
+	
+							var hours = ('0' + day.getHours()).slice(-2);
+							var minutes = ('0' + day.getMinutes()).slice(-2);
+							var seconds = ('0' + day.getSeconds()).slice(-2);
+							var timeString = hours + ':' + minutes + ':' + seconds;
+							var timeData = dateString + timeString;
+	
+							var template = `<div id="comments" class="comments">
+												<div class="comment_inner">
+													<div class="flex-grow-1 p-4">
+														<div id="hide"class="hide-div"><input id="pw" class="pwcheck mb-2" type="number" inputmode="numeric" placeholder="작성 시 입력한 비밀번호"/><button class="delete-btn mb-3 me-3">🗑️</button></div>
+														<h5 class="comment_message">${doc.data().contents}</h5>
+														<p class="comment_name">From. ${doc.data().name}</p>
+														<p class="comment_date">${timeData}</p>
+													</div>
+												</div>
+											</div>`;
+							$('.commentContainer').append(template)
+							$('#delete-menu-btn').attr({
+								"id": "delete-menu-btn" + a
+							});
+							$('#hide').attr({
+								"id": "hide" + a
+							});
+							$('#pw').attr({
+								"id": "pw" + a
+							});
+							$('#comments').attr({
+								"id": a
+							});
+	
+							a++
+							console.log(a)
+							console.log(doc.data())
+							console.log(doc.id)
+						})
+					})
+				});
+	
+			}
+	
+			$(document).on("click", ".delete-menu-btn", function () {
+				var Btnidx = $('.delete-menu-btn').index(this);
+				console.log(Btnidx);
+				const prevNode = $(this).previousSibling;
+				var hideIdx = "hide" + Btnidx
+				console.log(document.getElementById(hideIdx))
+				toggleDiv(hideIdx);
+			})
+	
+			$(document).on("click", ".delete-btn", function () {
+				var Btnidx = $('.delete-btn').index(this);
+				var pwidx = "pw" + Btnidx
+				var pwData = document.getElementById(pwidx).value
+	
+				const db = firebase.firestore();
+				var comments = db.collection('comments')
+				comments.doc(dataID[Btnidx]).get().then((doc) => {
+					var dataPW = doc.data().password
+	
+					if (pwData == dataPW) {
+						console.log("게시물을 삭제합니다.")
+						const div = document.getElementById(Btnidx);
+						div.remove();
+	
+						console.log(dataID[Btnidx])
+	
+						db.collection('comments').doc(dataID[Btnidx]).delete()
+					}
+					else {
+						alert("비밀번호가 일치하지 않습니다.")
+					}
+				});
+	
+	
+			})
+	
+			function toggleDiv(divID) {
+				var divStyle = document.getElementById(divID).style;
+	
+				if (divStyle.display === 'none') {
+					divStyle.display = 'block';
+				} else {
+					divStyle.display = 'none';
+				}
+			}
+	
+		</script>
 
-	<script>
+	<!-- <script>
 		// Import the functions you need from the SDKs you need
 		// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
@@ -1406,7 +1555,7 @@
 			}
 		}
 
-	</script>
+	</script> -->
 </body>
 
 </html>
