@@ -1279,7 +1279,6 @@
 		firebase.initializeApp(firebaseConfig);
 
 		const db = firebase.firestore()
-		var a = 0
 
 		document.getElementById('submit_btn').addEventListener('click', (event) => {
 			event.preventDefault()
@@ -1307,6 +1306,7 @@
 		var dataID = []
 		window.onload = function () {
 			document.getElementById('readBtn').addEventListener('click', (event) => {
+				var a = 0
 				$('.commentContainer').empty()
 				const db = firebase.firestore();
 				db.collection('comments').get().then((result) => {
