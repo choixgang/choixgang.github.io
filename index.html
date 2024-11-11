@@ -1052,7 +1052,7 @@
 							신랑과 신부에게 축하의 마음을 <br>
 							마구마구 전해 주세요
 						</h6>
-						<div class="btn_confetti vibration">
+						<div class="btn_confetti vibration mb-5">
 							<button class="build" id="confetti_btn">
 								<picture>
 									<source type="image/jpg" srcset="img/cong_img.jpg" data-srcset="img/cong_img.jpg">
@@ -1062,18 +1062,13 @@
 								</picture>
 							</button>
 						</div>
-						<h1 class="mg-md text-center heart-cnt mt-5 mb-5 ms-0 me-0" id="heart-cnt">
-							하트 : {n}
-						</h1>
-						<p id="demo">A Paragraph.</p>
-						<pre id="object"></pre>
-						<div class="row" id="btn_wrap">
+						<div class="row" id="btn_wrap mt-5">
 							<div class="col">
-								<a href="#" class="btn btn-d btn-lg w-100 write_btn" data-bs-toggle="modal"
+								<a href="#" class="btn btn-d btn-lg w-100 write_btn mt-5" data-bs-toggle="modal"
 									data-bs-target="#modal-cong"> 메세지 작성 ✏️</a>
 							</div>
 							<div class="col">
-								<a href="#" class="btn btn-d btn-lg w-100 read_btn" data-bs-toggle="modal"
+								<a href="#" class="btn btn-d btn-lg w-100 read_btn mt-5" data-bs-toggle="modal"
 									data-bs-target="#modal-list" id="readBtn"> 메세지 보러가기 📝</a>
 							</div>
 						</div>
@@ -1175,7 +1170,7 @@
 
 	<!-- Floating Buttons -->
 	<div class='float-button-container'>
-		<audio autoplay id="player" src="./music/music.m4a"></audio>
+		<audio autoplay loop id="player" src="./music/music.m4a"></audio>
 		<div class="player">
 			<div class="control">
 				<i class="fas fa-play" id="playbtn"></i>
@@ -1262,7 +1257,7 @@
 		//]]>
 	</script>
 
-	<script type="module">
+	<script>
 		// Import the functions you need from the SDKs you need
 		// TODO: Add SDKs for Firebase products that you want to use
 		// https://firebase.google.com/docs/web/setup#available-libraries
@@ -1283,7 +1278,8 @@
 		// Initialize Firebase
 		firebase.initializeApp(firebaseConfig);
 
-		const db = firebase.firestore();
+		const db = firebase.firestore()
+		var a = 0
 
 		document.getElementById('submit_btn').addEventListener('click', (event) => {
 			event.preventDefault()
@@ -1306,14 +1302,16 @@
 			document.getElementById('commentPW').value = null;
 			document.getElementById('commentMsg').value = null;
 
-		});
+		})
 
-
+		var dataID = []
 		window.onload = function () {
-			document.querySelector("#btn_wrap #readBtn").addEventListener('click', (e) => {
-				db.collection('comments').orderBy("timestamp", "desc").get().then((result) => {
+			document.getElementById('readBtn').addEventListener('click', (event) => {
+				$('.commentContainer').empty()
+				const db = firebase.firestore();
+				db.collection('comments').get().then((result) => {
 					result.forEach((doc) => {
-						console.log(doc.data())
+						dataID.push(doc.id)
 
 						const day = doc.data().timestamp.toDate()
 						var year = day.getFullYear();
@@ -1327,49 +1325,86 @@
 						var timeString = hours + ':' + minutes + ':' + seconds;
 						var timeData = dateString + timeString;
 
-						var template = `<div id="comments_card" class="comments_card">
-											<div class="delete-info object-hidden">
-												<div class="row">
-													<div class="col">
-														<label class="form-label">Label</label>
-													</div>
-													<div class="col">
-														<div class="form-group mb-3">
-															<input class="form-control">
-														</div>
-													</div>
-													<div class="col">
-														<button href="index.html" class="btn btn-d btn-lg"> 삭제 </button>
-													</div>
-												</div>
-											</div>
+						var template = `<div id="comments" class="comments">
+											<div id="hide"class="hide-div" style="display:none"><input id="pw" class="pwcheck mt-3" type="number" inputmode="numeric" placeholder="작성 시 입력한 비밀번호"/><button class="delete-btn mt-3 me-3">🗑️</button></div>
 											<div class="comment_inner">
 												<div class="flex-grow-1 p-4">
-													<button id="" class="btn btn-d btn-lg float-end btn-style delete-menu-btn" data-toggle-visibility="delete-info">X</button>
+													<button id="delete-menu-btn" class="btn btn-d btn-lg float-end btn-style delete-menu-btn">X</button>
 													<h5 class="comment_message">${doc.data().contents}</h5>
-													<p class="comment_name">${doc.data().name}</p>
+													<p class="comment_name">From. ${doc.data().name}</p>
 													<p class="comment_date">${timeData}</p>
 												</div>
 											</div>
 										</div>`;
 						$('.commentContainer').append(template)
+						$('#delete-menu-btn').attr({
+							"id": "delete-menu-btn" + a
+						});
+						$('#hide').attr({
+							"id": "hide" + a
+						});
+						$('#pw').attr({
+							"id": "pw" + a
+						});
+						$('#comments').attr({
+							"id": a
+						});
 
+						a++
+						console.log(a)
+						console.log(doc.data())
+						console.log(doc.id)
 					})
-
-					
-					$(document).on("click",".delete-menu-btn", function () {
-							alert('delete btn click!')
-							console.log(doc.data().id)
-						})
 				})
 			});
 
-
-
-
 		}
 
+		$(document).on("click", ".delete-menu-btn", function () {
+			var Btnidx = $('.delete-menu-btn').index(this);
+			console.log(Btnidx);
+			const prevNode = $(this).previousSibling;
+			var hideIdx = "hide" + Btnidx
+			console.log(document.getElementById(hideIdx))
+			toggleDiv(hideIdx);
+		})
 
+		$(document).on("click", ".delete-btn", function () {
+			var Btnidx = $('.delete-btn').index(this);
+			var pwidx = "pw" + Btnidx
+			var pwData = document.getElementById(pwidx).value
+
+			const db = firebase.firestore();
+			var comments = db.collection('comments')
+			comments.doc(dataID[Btnidx]).get().then((doc) => {
+				var dataPW = doc.data().password
+
+				if (pwData == dataPW) {
+					console.log("게시물을 삭제합니다.")
+					const div = document.getElementById(Btnidx);
+					div.remove();
+
+					console.log(dataID[Btnidx])
+
+					db.collection('comments').doc(dataID[Btnidx]).delete()
+				}
+				else {
+					alert("비밀번호가 일치하지 않습니다.")
+				}
+			});
+
+
+		})
+
+		function toggleDiv(divID) {
+			var divStyle = document.getElementById(divID).style;
+
+			if (divStyle.display === 'none') {
+				divStyle.display = 'block';
+			} else {
+				divStyle.display = 'none';
+			}
+		}
 
 	</script>
 </body>
