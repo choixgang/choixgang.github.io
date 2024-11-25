@@ -55,7 +55,7 @@
 					<div class="col-lg-6 align-self-center col-md-7 pe-0 pb-0 pt-0 ps-0">
 						<picture>
 							<source type="image/webp" srcset="img/lazyload-ph.png" data-srcset="img/IMG_0417-1.webp">
-							<img src="img/lazyload-ph.png" data-src="img/IMG_0417-1.png"
+							<img src="img/lazyload-ph.png" data-src="img/IMG_0417-1.jpg"
 								class="img-fluid mx-auto d-block lazyload" alt="placeholder image" width="860"
 								height="1500">
 						</picture>
@@ -597,7 +597,7 @@
 											</a>
 										</div>
 										<div class="col mt-1 ms-0 me-0 mb-0 pt-0 pb-0 ps-0 pe-0">
-											<a href="#" data-lightbox="img/img236webp" data-gallery-id="gallery-1"
+											<a href="#" data-lightbox="img/img26.webp" data-gallery-id="gallery-1"
 												data-frame="frameless-lb" data-lightbox-webp="img/img26.webp">
 												<picture>
 													<source type="image/webp" srcset="img/lazyload-ph.png"
@@ -624,7 +624,7 @@
 								</div>
 								<div class="text-center mt-3 mb-3">
 									<button onclick="changeButtonText()"
-										class="btn mt-3 me-3 ms-4 pt-0 pb-0 ps-0 pe-0 mb-3 btn-rd btn_photo btn-sm animated shake-hvr btn-wire wire-btn-c-4019 wire-btn-c--1"
+										class="btn mt-3 me-3 ms-4 pt-0 pb-0 ps-0 pe-0 mb-3 btn_photo"
 										data-toggle-visibility="more-photo-back,more-photo" id="더보기">사진더보기</button>
 								</div>
 							</div>
@@ -1062,6 +1062,40 @@
 										종윤&영은 결혼식까지
 									</h1>
 								</div>
+								<!-- 메인 타이머 -->
+								<div class="timer-background">
+									<div class="timer-box">
+
+										<span class="timer-component">
+											<p id="timer-days" class="timer-title">-</p>
+											<p class="timer-sub-title">일</p>
+										</span>
+
+										<p class="timer-colon">:</p>
+
+										<span class="timer-component">
+											<p id="timer-hours" class="timer-title">-</p>
+											<p class="timer-sub-title">시간</p>
+										</span>
+
+										<p class="timer-colon">:</p>
+
+
+										<span class="timer-component">
+											<p id="timer-minute" class="timer-title">-</p>
+											<p class="timer-sub-title">분</p>
+										</span>
+
+										<p class="timer-colon">:</p>
+
+										<span class="timer-component">
+											<p id="timer-seconds" class="timer-title">-</p>
+											<p class="timer-sub-title">초</p>
+										</span>
+
+									</div>
+								</div>
+
 								<div class="text-center d-day tc-4019 ms-5 me-5">
 									<h1 class="mg-md d-day text-center tc-4019 mx-auto">
 										<span class="d-day" width="100%" id="d-day"></span>
@@ -1242,6 +1276,7 @@
 	<script src="./js/scrollFX.js?445"></script>
 	<script src="./js/formHandler.js?9505"></script>
 	<script src="./js/jqBootstrapValidation.js"></script>
+	<script src="./js/timer.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/8.6.5/firebase-app.js"></script>
@@ -1295,7 +1330,7 @@
 		});
 		//]]>
 	</script>
-		<!-- <script>
+	<!-- <script>
 			// Import the functions you need from the SDKs you need
 			// TODO: Add SDKs for Firebase products that you want to use
 			// https://firebase.google.com/docs/web/setup#available-libraries
@@ -1497,7 +1532,7 @@
 				var a = 0
 				$('.commentContainer').empty()
 				const db = firebase.firestore();
-				db.collection('comments').orderBy("timestamp","desc").get().then((result) => {
+				db.collection('comments').orderBy("timestamp", "desc").get().then((result) => {
 					result.forEach((doc) => {
 						dataID.push(doc.id)
 
