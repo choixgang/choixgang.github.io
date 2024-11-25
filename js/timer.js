@@ -50,29 +50,15 @@ let isMain = true;
 setTimes();
 
 const counter = ($counter, max) => {
-  if (max < 10) {
-    max = max * 10;
-  }
-  let now = max;
-
-  const handle = setInterval(() => {
-    $counter.innerHTML = Math.ceil(max - now);
-
-    if (now < 3) {
-      clearInterval(handle);
-      const count = setInterval(() => {
         setTimes();
         setTimerElement();
-      }, 1000);
-    }
-
-    const step = now / 10;
-
-    now -= step;
-  }, 50);
 };
 
-window.onload = () => {
+setInterval(onLoadEvent, 1000);
+
+
+
+function onLoadEvent(){
     setTimeout(() => counter($day, days), 500);
     setTimeout(() => counter($hour, hours), 500);
     setTimeout(() => counter($minute, minutes), 500);
