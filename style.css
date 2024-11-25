@@ -1737,13 +1737,13 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 0.5 em;
+    font-size: 0.4 em;
 	letter-spacing: -0.03em;
 }
 
 #current {
     text-align: right;
-	font-size: 0.5 em;
+	font-size: 0.4 em;
 	letter-spacing: -0.03em;
 	font-family: "Pretendard-Regular";
 }
