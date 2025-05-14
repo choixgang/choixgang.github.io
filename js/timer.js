@@ -34,7 +34,7 @@ function setTimes() {
   let now = new Date();
   let finishDate = new Date(dateString).getTime() + 9 * 60 * 60 * 1000;
   let today = now.getTime() + 9 * 60 * 60 * 1000;
-  let diffDate = finishDate - today;
+  let diffDate = today - finishDate;
   millisecondToDate(diffDate);
 }
 
